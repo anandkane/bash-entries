@@ -1,0 +1,3 @@
+source <(minikube completion bash)
+alias m=minikube
+complete -o default -F __start_minikube m

@@ -1,0 +1,7 @@
+source <(kubectl completion bash)
+alias k=kubectl
+complete -o default -F __start_kubectl k
+alias doc=docker
+complete -F _docker doc
+alias d=docker
+complete -F _docker d

@@ -1,0 +1,3 @@
+source <(helm completion bash)
+alias h=helm
+complete -o default -F __start_helm h

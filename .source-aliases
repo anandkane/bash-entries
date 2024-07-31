@@ -1,0 +1,32 @@
+alias cls=clear
+alias docprunecont='docker container prune'
+alias docprunenet='docker network prune'
+alias docpruneimg='docker image prune'
+
+alias mvnrpm='mvn org.codehaus.mojo:rpm-maven-plugin:2.3.0:rpm'
+alias mvndpkg='mvn net.sourceforge.javadpkg:dpkg-maven-plugin:1.0.5:dpkg'
+
+alias mndocker='eval $(minikube docker-env)'
+alias umndocker='eval $(minikube docker-env --unset)'
+
+alias startmn=minikube-start.sh
+alias stopmn=minikube-stop.sh
+
+sudo() {
+       if [[ "$1" = "aget" || "$1" = "agte" ]]; then
+           shift
+           command sudo apt-get "$@"
+       else
+           command sudo "$@"
+       fi
+   }
+
+# workaround
+source /usr/share/bash-completion/completions/apt-get
+alias aget=apt-get
+complete -o default -F _apt_get aget
+alias agte=apt-get
+complete -o default -F _apt_get agte
+
+alias e=echo
+alias b=bito
